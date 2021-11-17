@@ -1,0 +1,10 @@
+version: '2.6'
+services:
+  client:
+    image: localhost:5000/teamviewer
+    build: ./
+    environment:
+      DISPLAY: "unix$DISPLAY"
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+
